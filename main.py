@@ -23,11 +23,11 @@ def get_str_guester(up_fingers, list_lms):
         angle = get_angle(v1, v2)
         return "9" if angle < 160 else "1"
     elif len(up_fingers) == 1 and up_fingers[0] == 4:
-        return "Good"
+        return "11"
     elif len(up_fingers) == 1 and up_fingers[0] == 20:
-        return "Bad"
+        return "12"
     elif len(up_fingers) == 1 and up_fingers[0] == 12:
-        return "FXXX"
+        return "13"
     elif len(up_fingers) == 2 and up_fingers == [8, 12]:
         return "2"
     elif len(up_fingers) == 2 and up_fingers == [4, 20]:
@@ -40,9 +40,9 @@ def get_str_guester(up_fingers, list_lms):
         dis_8_12 = np.linalg.norm(list_lms[8] - list_lms[12])
         dis_4_12 = np.linalg.norm(list_lms[4] - list_lms[12])
         ratio = dis_4_12 / (dis_8_12 + 1)
-        return "Gun" if ratio > 5 else "7"
+        return "14" if ratio > 5 else "7"
     elif len(up_fingers) == 3 and up_fingers == [4, 8, 20]:
-        return "ROCK"
+        return "15"
     elif len(up_fingers) == 4 and up_fingers == [8, 12, 16, 20]:
         return "4"
     elif len(up_fingers) == 5:
