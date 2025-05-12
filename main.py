@@ -18,17 +18,13 @@ def get_angle(v1, v2):
 
 def get_str_guester(up_fingers, list_lms):
     if len(up_fingers) == 1 and up_fingers[0] == 8:
-        v1 = list_lms[6] - list_lms[7]
-        v2 = list_lms[8] - list_lms[7]
-        angle = get_angle(v1, v2)
-        if angle < 160: 
-            return "1"
+        return "1"
     elif len(up_fingers) == 1 and up_fingers[0] == 4:
-        return "6" //good
+        return "6" #good
     elif len(up_fingers) == 1 and up_fingers[0] == 20:
-        return "8" //bad
+        return "8" #bad
     elif len(up_fingers) == 1 and up_fingers[0] == 12:
-        return "9" //fuck
+        return "9" #fuck
     elif len(up_fingers) == 2 and up_fingers == [8, 12]:
         return "2"
     elif len(up_fingers) == 3 and up_fingers == [8, 12, 16]:
@@ -37,9 +33,9 @@ def get_str_guester(up_fingers, list_lms):
         dis_8_12 = np.linalg.norm(list_lms[8] - list_lms[12])
         dis_4_12 = np.linalg.norm(list_lms[4] - list_lms[12])
         ratio = dis_4_12 / (dis_8_12 + 1)
-        return "7" //gun
+        return "7" #gun
     elif len(up_fingers) == 3 and up_fingers == [4, 8, 20]:
-        return "10" //rock
+        return "10" #rock
     elif len(up_fingers) == 4 and up_fingers == [8, 12, 16, 20]:
         return "4"
     elif len(up_fingers) == 5:
