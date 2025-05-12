@@ -21,7 +21,7 @@ def get_str_guester(up_fingers, list_lms):
         v1 = list_lms[6] - list_lms[7]
         v2 = list_lms[8] - list_lms[7]
         angle = get_angle(v1, v2)
-        if angle < 160 
+        if angle < 160: 
             return "1"
     elif len(up_fingers) == 1 and up_fingers[0] == 4:
         return "6" //good
