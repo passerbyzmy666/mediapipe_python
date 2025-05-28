@@ -18,26 +18,26 @@ def get_angle(v1, v2):
 
 def get_str_guester(up_fingers, list_lms):
     if len(up_fingers) == 1 and up_fingers[0] == 8:
-        return "1"
+        return "22"  #1
     elif len(up_fingers) == 1 and up_fingers[0] == 4:
-        return "6" #good
+        return "27" #good
     elif len(up_fingers) == 1 and up_fingers[0] == 20:
-        return "8" #bad
+        return "28" #bad
     elif len(up_fingers) == 2 and up_fingers == [8, 12]:
-        return "2"
+        return "23"  #2
     elif len(up_fingers) == 3 and up_fingers == [8, 12, 16]:
-        return "3"
+        return "24"  #3
     elif len(up_fingers) == 3 and up_fingers == [4, 8, 12]:
         dis_8_12 = np.linalg.norm(list_lms[8] - list_lms[12])
         dis_4_12 = np.linalg.norm(list_lms[4] - list_lms[12])
         ratio = dis_4_12 / (dis_8_12 + 1)
-        return "7" #gun
+        return "29" #gun
     elif len(up_fingers) == 3 and up_fingers == [4, 8, 20]:
-        return "9" #rock
+        return "30" #rock
     elif len(up_fingers) == 4 and up_fingers == [8, 12, 16, 20]:
-        return "4"
+        return "25"  #4
     elif len(up_fingers) == 5:
-        return "5"
+        return "26"  #5
     return " "
 
 
